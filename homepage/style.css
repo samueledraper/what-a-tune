@@ -29,11 +29,13 @@ main {
 }
 
 h1 {
-  color: white;
+  color: #797b7c;
   font-size: 3rem;
   margin-bottom: 6rem;
+  text-decoration: underline #020230;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
 }
-
 .splash-section {
   display: flex;
   position: relative;
@@ -43,10 +45,15 @@ h1 {
   overflow: hidden;
   border: 4px solid rgb(83, 81, 81);
   border-radius: 10%;
-  max-width: 90%;
+  max-width: 80%;
   box-shadow: 0 8px 16px rgb(127, 126, 126), 0 16px 32px rgb(68, 68, 68);
-}
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 .video-bg {
   position: absolute;
   width: 100%;
@@ -70,8 +77,8 @@ h1 {
   min-height: 10rem;
 }
 
-p {
-  color: white;
+.content-wrapper p {
+  color: #797b7c;
   max-width: 70%;
   text-align: center;
   margin-top: 30px;
@@ -80,11 +87,37 @@ p {
   line-height: 30px;
 }
 
-a {
-  color: white;
+.content-wrapper a {
   margin-top: 15rem;
+  text-decoration: none;
+  position: relative;
+  color: #797b7c;
+  font-size: 1.5rem;
+}
+.content-wrapper a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #797b7c;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.content-wrapper a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .mood-section {
-  margin-top: 100rem;
+  min-height: 70vh;
+  text-align: center;
+  margin: 4rem auto;
+  overflow: hidden;
+  border: 4px solid rgb(83, 81, 81);
+  border-radius: 10%;
+  max-width: 90%;
+  box-shadow: 0 8px 16px rgb(127, 126, 126), 0 16px 32px rgb(68, 68, 68);
 }
