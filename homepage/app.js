@@ -3,10 +3,20 @@ const thumbsDownButton = document.getElementById("thumbsDownButton");
 
 const genreElements = document.querySelectorAll(".genre-button");
 
-const userProfile = {
-  mood: "",
-  genre: "",
-};
+let userProfile = {};
+
+const parsedData = JSON.parse(localStorage.getItem("userProfile"));
+
+if (parsedData) {
+  userProfile = parsedData;
+} else {
+  userProfile = {
+    mood: "",
+    genre: "",
+  };
+}
+
+console.table(userProfile);
 
 function handleMoodChange(target) {
   if (target === thumbsUpButton) {
