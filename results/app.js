@@ -1,3 +1,4 @@
+const userProfile = JSON.parse(localStorage.getItem("userProfile"));
 const userMessageElement = document.getElementById("userMessage");
 const videoElement = document.getElementById("recommendationVideo");
 
@@ -28,7 +29,7 @@ const songs = [
     "bad",
     "pop",
     "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ed/17/65/ed17656f-4c55-97c2-c93d-4b94f829799f/859381157694.jpg/600x600bb.jpg",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?si=IiZZpCIPEUjonDIR"
   ),
   new Song(
     "Never Gonna Give You Down Good",
@@ -36,7 +37,7 @@ const songs = [
     "good",
     "rock",
     "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ed/17/65/ed17656f-4c55-97c2-c93d-4b94f829799f/859381157694.jpg/600x600bb.jpg",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?si=IiZZpCIPEUjonDIR"
   ),
   new Song(
     "Never Gonna Give You Down Bad",
@@ -44,7 +45,7 @@ const songs = [
     "bad",
     "rock",
     "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ed/17/65/ed17656f-4c55-97c2-c93d-4b94f829799f/859381157694.jpg/600x600bb.jpg",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?si=IiZZpCIPEUjonDIR"
   ),
   new Song(
     "Never Gonna Give You Left Good",
@@ -52,7 +53,7 @@ const songs = [
     "good",
     "Electronic",
     "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ed/17/65/ed17656f-4c55-97c2-c93d-4b94f829799f/859381157694.jpg/600x600bb.jpg",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?si=IiZZpCIPEUjonDIR"
   ),
   new Song(
     "Never Gonna Give You Left Bad",
@@ -60,7 +61,7 @@ const songs = [
     "bad",
     "Electronic",
     "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ed/17/65/ed17656f-4c55-97c2-c93d-4b94f829799f/859381157694.jpg/600x600bb.jpg",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?si=IiZZpCIPEUjonDIR"
   ),
   new Song(
     "Never Gonna Give You Right Good",
@@ -68,7 +69,7 @@ const songs = [
     "good",
     "hip-hop",
     "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ed/17/65/ed17656f-4c55-97c2-c93d-4b94f829799f/859381157694.jpg/600x600bb.jpg",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?si=IiZZpCIPEUjonDIR"
   ),
   new Song(
     "Never Gonna Give You Right Bad",
@@ -76,7 +77,7 @@ const songs = [
     "bad",
     "hip-hop",
     "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ed/17/65/ed17656f-4c55-97c2-c93d-4b94f829799f/859381157694.jpg/600x600bb.jpg",
-    "https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?si=IiZZpCIPEUjonDIR"
   ),
 ];
 
@@ -84,26 +85,29 @@ let matchingSongs = [];
 
 function checkSongs() {
   for (let i = 0; i < songs.length; i++) {
-    if (songs[i].mood === userProfile.mood && songs[i].genre === userProfile.genre) {
+    if (
+      songs[i].mood === userProfile.mood &&
+      songs[i].genre === userProfile.genre
+    ) {
       matchingSongs.push(songs[i]);
     } else {
       console.log("no match");
     }
   }
+
+  renderSong();
 }
 
 function createRandomIndex(arr) {
   return Math.floor(Math.random() * arr.length);
 }
 
-const filteredSongs = songs;
-
 function renderSong() {
-  const chosenSong = filteredSongs[createRandomIndex(filteredSongs)];
+  const chosenSong = matchingSongs[createRandomIndex(matchingSongs)];
+  console.log(chosenSong);
   const userMessageText = `Here's a ${chosenSong.genre} song for when you're in a ${chosenSong.mood} mood. Please enjoy!`;
   userMessageElement.textContent = userMessageText;
   videoElement.src = chosenSong.yt_src;
 }
 
-renderSong();
-
+checkSongs();
