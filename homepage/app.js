@@ -1,12 +1,7 @@
 const thumbsUpButton = document.getElementById("thumbsUpButton");
 const thumbsDownButton = document.getElementById("thumbsDownButton");
 
-// const genre1Element = document.getElementById("");
-// const genre2Element = document.getElementById("");
-// const genre3Element = document.getElementById("");
-// const genre4Element = document.getElementById("");
-
-// const genreElements = document.querySelectorAll("");
+const genreElements = document.querySelectorAll(".genre-button");
 
 const userProfile = {
   mood: "",
@@ -20,29 +15,28 @@ function handleMoodChange(target) {
     userProfile.mood = "bad";
   }
 
-  localStorage.setItem("userProfile", userProfile);
+  localStorage.setItem("userProfile", JSON.stringify(userProfile));
 }
 
 function handleGenreChange(target) {
   for (let i = 0; i < genreElements.length; i++) {
     if (genreElements[i] === target) {
-      console.log(genreElements[i]);
+      userProfile.genre = target.dataset.genre;
     }
   }
+  localStorage.setItem("userProfile", JSON.stringify(userProfile));
 }
 
 thumbsUpButton.addEventListener("click", function (event) {
   handleMoodChange(event.target);
-  console.table(userProfile);
 });
 
 thumbsDownButton.addEventListener("click", function (event) {
   handleMoodChange(event.target);
-  console.table(userProfile);
 });
 
-// for (let i = 0; i < genreElements.length; i++) {
-//   genreElements[i].addEventListener("click", function (event) {
-//     handleGenreChange(event.target);
-//   });
-// }
+for (let i = 0; i < genreElements.length; i++) {
+  genreElements[i].addEventListener("click", function (event) {
+    handleGenreChange(event.target);
+  });
+}
