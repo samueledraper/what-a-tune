@@ -1,7 +1,7 @@
-const thumbsUpButton = document.getElementById("thumbsUpButton");
-const thumbsDownButton = document.getElementById("thumbsDownButton");
+const thumbsUpButton = document.getElementById(/*thumbs-up-button-id*/);
+const thumbsDownButton = document.getElementById(/*thumbs-down-button-id*/);
 
-const genreElements = document.querySelectorAll(".genre-button");
+const genreElements = document.querySelectorAll(/*.genre-button-class-name*/);
 
 let userProfile = {};
 
@@ -15,8 +15,6 @@ if (parsedData) {
     genre: "",
   };
 }
-
-console.table(userProfile);
 
 function handleMoodChange(target) {
   if (target === thumbsUpButton) {
