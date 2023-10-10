@@ -1,5 +1,7 @@
 const userProfile = JSON.parse(localStorage.getItem("userProfile"));
+
 const userMessageElement = document.getElementById("userMessage");
+const albumCoverElement = document.getElementById("album-cover");
 const videoElement = document.getElementById("recommendationVideo");
 
 const newSongButton = document.getElementById("newSong");
@@ -172,6 +174,8 @@ function renderSong() {
   const chosenSong = matchingSongs[chosenSongIndex];
   const userMessageText = `Here's a ${chosenSong.genre} song for when you're in a ${chosenSong.mood} mood. Please enjoy!`;
   userMessageElement.textContent = userMessageText;
+  albumCoverElement.src = chosenSong.albumArtSrc;
+  albumCoverElement.alt = `Album art for ${chosenSong.name} by ${chosenSong.artist}`;
   videoElement.src = chosenSong.ytSrc;
   currentSongIndex = chosenSongIndex;
 }
