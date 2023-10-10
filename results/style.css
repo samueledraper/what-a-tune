@@ -27,6 +27,12 @@ body {
   gap: 25px;
 }
 
+.song-recommendation p {
+  color: white;
+  font-size: 2rem;
+  margin: 40px auto;
+}
+
 button {
   margin: 20px;
   font-size: 1.5rem;
