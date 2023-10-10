@@ -20,11 +20,6 @@ body {
   }
 }
 
-.vinyl-animation {
-  display: flex;
-  justify-content: center;
-}
-
 .song-recommendation {
   display: flex;
   flex-direction: column;
@@ -69,7 +64,82 @@ button:hover::before {
   transform-origin: left;
 }
 
-img {
+.vinyl-animation {
+  display: flex;
+  width: 400px;
+  margin: 100px auto 0 auto;
+  justify-content: center;
+}
+
+.vinyl-animation img {
   height: 200px;
   width: 200px;
+  position: relative;
+  left: 40px;
+  z-index: 1;
+}
+
+.vinyl {
+  position: relative;
+  right: 40px;
+  animation: spin 4s 0.51s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: linear-gradient(-45deg, #333, black, #555, black, #333);
+}
+
+.vinyl::before {
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: repeating-radial-gradient(black, black 5px, #1c1c1c 6px, #1c1c1c 7px);
+  border-radius: 50%;
+}
+
+.inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(white, white 50%, grey 50%, grey);
+  border-radius: 50%;
+}
+
+.inner::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+}
+
+.inner::after {
+  content: "Artist";
+  width: 55px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 7px;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
