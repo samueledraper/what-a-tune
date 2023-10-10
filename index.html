@@ -56,7 +56,7 @@
         <div id="target-section1">
           <h2>What's Your Current Mood?</h2>
           <!-- Temporary width/heights for the image buttons-->
-          <button class="thumbs-up-btn">
+          <button class="thumbs-up-btn" id="thumbs-up">
             <img
               src="./homepage/images/thumbsup.png"
               width="75px"
@@ -64,7 +64,7 @@
               alt="Click for thumbs up"
             />
           </button>
-          <button class="thumbs-down-btn">
+          <button class="thumbs-down-btn" id="thumbs-down">
             <img
               src="./homepage/images/thumbsdown.png"
               width="75px"
@@ -77,16 +77,16 @@
       </section>
       <section class="genre-section">
         <h2>Choose A Genre...</h2>
-        <div class="rock-bubble">
+        <div class="genre-bubble rock-bubble" data-genre="rock">
           <a>Rock</a>
         </div>
-        <div class="electronic-bubble">
+        <div class="genre-bubble electronic-bubble" data-genre="electronic">
           <a>Electronic</a>
         </div>
-        <div class="hip-hop-bubble">
+        <div class="genre-bubble hip-hop-bubble" data-genre="hip-hop">
           <a>Hip-Hop</a>
         </div>
-        <div class="classical-bubble">
+        <div class="genre-bubble classical-bubble" data-genre="classical">
           <a>Classical</a>
         </div>
       </section>
