@@ -37,7 +37,7 @@ button {
   padding: 10px;
   display: inline-block;
   position: relative;
-  color: #797b7c;
+  color: white;
   text-decoration: none;
 }
 
@@ -131,7 +131,7 @@ button:hover::before {
   content: "Artist";
   width: 55px;
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Staatliches", sans-serif;
   font-size: 7px;
   position: absolute;
   left: 50%;
@@ -142,4 +142,14 @@ button:hover::before {
   to {
     transform: rotate(360deg);
   }
+}
+
+footer {
+  text-align: center;
+  padding: 50px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
 }

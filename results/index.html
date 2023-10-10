@@ -21,7 +21,7 @@
   <body>
     <main>
       <section class="vinyl-animation">
-        <img src="./images/moon-safari.jpeg" alt="" />
+        <img id="album-cover" src="./images/moon-safari.jpeg" alt="" />
         <div class="vinyl">
           <div class="inner" id="vinylArtist"></div>
         </div>
@@ -38,8 +38,10 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
-        <button id="newSong">New song</button>
-        <button id="reload">Start again</button>
+        <div class="user-options">
+          <button id="newSong">New song</button>
+          <button id="reload">Start again</button>
+        </div>
       </section>
     </main>
     <footer>
