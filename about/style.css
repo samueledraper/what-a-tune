@@ -30,7 +30,7 @@ nav li {
 }
 
 .hero {
-  background-image: url("bcg.png");
+  background-image: url("./bcg.png");
   background-size: cover;
   background-position: center;
   color: #cfcfcf;
