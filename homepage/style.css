@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +13,6 @@ body {
   background-size: 600% 600%;
   animation: gradient 10s ease infinite;
   height: 100vh;
-  scroll-behavior: smooth;
 }
 @keyframes gradient {
   0% {
@@ -37,10 +40,10 @@ h2 {
   text-decoration-thickness: 3px;
   opacity: 70%;
 }
-section {
+.splash-section {
   display: flex;
   position: relative;
-  min-height: 70vh;
+  min-height: 80vh;
   text-align: center;
   margin: 4rem auto;
   overflow: hidden;
@@ -92,7 +95,7 @@ section {
   text-decoration: none;
   position: relative;
   color: #797b7c;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .content-wrapper a::before {
   content: "";
@@ -101,7 +104,7 @@ section {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #797b7c;
+  background-color: #00ff59;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
@@ -117,6 +120,7 @@ section {
   border: none;
   height: 20px;
   width: 20px;
+  filter: grayscale(100%);
 }
 
 .mood-section .video-bg {
@@ -124,6 +128,25 @@ section {
 }
 
 .mood-section {
-  flex: 1;
+  display: flex;
+  position: relative;
+  min-height: 70vh;
+  text-align: center;
+  margin: 4rem auto;
+  overflow: hidden;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 100%;
+  margin-top: 10rem;
+  padding: 10rem;
+}
+
+.link-btn {
+  background-color: transparent;
+  border: none;
+  margin-top: 120px;
 }
