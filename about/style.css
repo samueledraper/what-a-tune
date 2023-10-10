@@ -1,0 +1,101 @@
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  color: #d4af37;
+}
+
+/* background image */
+header {
+  background-image: url("piano.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #d4af37;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* buttons */
+.nav-button {
+  background-color: #4169e1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* hoover */
+.nav-button:hover {
+  background-color: #003171;
+  transform: translate3d(5px, 3px, 1px); /* love it  https://css-tricks.com/ */
+}
+
+.resized-header {
+  height: 50px;
+}
+
+.hero {
+  background-image: url("bcg.png");
+  background-size: cover;
+  background-position: center;
+  color: #cfcfcf;
+  text-align: center;
+  padding: 100px 0;
+  color: #d4af37;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0070c9;
+  color: #cfcfcf;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.music {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.music-section {
+  margin: 20px;
+}
+
+footer {
+  background-color: black;
+  color: #cfcfcf;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* spinning record */
+
+img[src="vinyl.png"] {
+  width: 10%;
+  max-height: 10%;
+  animation: spin 3.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
