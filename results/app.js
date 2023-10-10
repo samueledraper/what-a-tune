@@ -2,7 +2,6 @@ const userProfile = JSON.parse(localStorage.getItem("userProfile"));
 
 const userMessageElement = document.getElementById("userMessage");
 const albumCoverElement = document.getElementById("album-cover");
-const vinylLabelElement = document.getElementById("vinylArtist");
 const videoElement = document.getElementById("recommendationVideo");
 
 const newSongButton = document.getElementById("newSong");
