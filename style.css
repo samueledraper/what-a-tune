@@ -1,7 +1,6 @@
 body,
 h1,
-p,
-ul {
+p {
   margin: 0;
   padding: 0;
   justify-content: space-between;
@@ -9,24 +8,38 @@ ul {
   color: #d4af37;
 }
 
+/* background image */
 header {
-  background-color: #231f20;
+  background-image: url("piano.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   color: #d4af37;
-  padding: 20px;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav ul {
-  list-style-type: none;
-  display: flex;
-  color: #d4af37;
+/* buttons */
+.nav-button {
+  background-color: #4169e1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
-nav li {
-  margin-right: 20px;
-  color: #d4af37;
+/* hoover */
+.nav-button:hover {
+  background-color: #003171;
+  transform: translate3d(5px, 3px, 1px); /* love it  https://css-tricks.com/ */
+}
+
+.resized-header {
+  height: 50px;
 }
 
 .hero {
@@ -68,4 +81,21 @@ footer {
   color: #cfcfcf;
   text-align: center;
   padding: 10px 0;
+}
+
+/* spinning record */
+
+img[src="vinyl.png"] {
+  width: 10%;
+  max-height: 10%;
+  animation: spin 3.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
