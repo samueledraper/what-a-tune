@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What A Tune!</title>
+    <!-- Vinyl Favicon for the tab!-->
+    <link rel="apple-touch-icon" sizes="180x180" href=".homepage/icon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href=".homepage/icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href=".homepage/icon/favicon-16x16.png" />
+    <link rel="manifest" href="./icon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Rubik+Mono+One&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./homepage/style.css" />
+    <script src="./homepage/app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="splash-section">
+        <video class="video-bg" autoplay muted loop>
+          <source src="./homepage/video/turntablevideo.mp4" type="video/mp4" />
+        </video>
+        <div class="content-wrapper">
+          <h2>What A Tune</h2>
+          <p>
+            Welcome to 'What A Tune!'- Your ultimate destination for harmonizing your mood with
+            music. Get ready to experience the magic of melodies as we craft the perfect song
+            tailored to your current emotions and your preferred genre. Simply share your feelings,
+            select your favourite musical genre, and let the symphony of sound amplify your mood
+            like never before!
+          </p>
+          <!-- Animated anchor tag, could possibly change this to a button with an animation to smooth scroll it down to the next section??-->
+          <a href="#target-section1">Let's Get Started!</a>
+        </div>
+      </section>
+      <section id="target-section1" class="mood-section">
+        <video class="video-bg" autoplay muted loop>
+          <source src="./homepage/video/dancing.mp4" type="video/mp4" />
+        </video>
+        <div class="content-wrapper">
+          <h2>What's Your Current Mood?</h2>
+          <!-- Temporary width/heights for the image buttons-->
+          <button class="thumbs-up-btn" id="thumbs-up">
+            <img
+              src="./homepage/images/thumbsup.png"
+              width="75px"
+              height="100px"
+              alt="Click for thumbs up"
+            />
+          </button>
+          <button class="thumbs-down-btn" id="thumbs-down">
+            <img
+              src="./homepage/images/thumbsdown.png"
+              width="75px"
+              height="100px"
+              alt="Click for thumbs down"
+            />
+          </button>
+          <a>Next Question!</a>
+        </div>
+      </section>
+      <section class="genre-section">
+        <h2>Choose A Genre...</h2>
+        <div class="genre-bubble rock-bubble" data-genre="rock">
+          <a>Rock</a>
+        </div>
+        <div class="genre-bubble electronic-bubble" data-genre="electronic">
+          <a>Electronic</a>
+        </div>
+        <div class="genre-bubble hip-hop-bubble" data-genre="hip-hop">
+          <a>Hip-Hop</a>
+        </div>
+        <div class="genre-bubble classical-bubble" data-genre="classical">
+          <a>Classical</a>
+        </div>
+      </section>
+      <section class="see-results-section">
+        <button><a href="./results/index.html">See Results!</a></button>
+      </section>
+    </main>
+    <footer>
+      <a href="./about/index.html"><b>Learn About Us!</b></a>
+      <p>&copy;2023</p>
+    </footer>
+  </body>
+</html>

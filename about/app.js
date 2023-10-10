@@ -1,4 +1,5 @@
 const vinylRecord = document.querySelector(".vinyl-container");
+
 const vinylImage = document.querySelector("img[src='vinyl.png']");
 
 let isSpinning = false;

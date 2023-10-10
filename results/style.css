@@ -1,4 +1,161 @@
-img {
+* {
+  font-family: "Staatliches", sans-serif;
+}
+
+body {
+  background: linear-gradient(-45deg, #000000, #0c0d0d, #212222, #212325);
+  background-size: 600% 600%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.song-recommendation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.song-recommendation p {
+  color: white;
+  font-size: 2rem;
+  margin: 40px auto;
+}
+
+button {
+  margin: 20px;
+  font-size: 1.5rem;
+  background-color: black;
+  width: 200px;
+  cursor: pointer;
+  border: 0;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.vinyl-animation {
+  display: flex;
+  width: 400px;
+  margin: 100px auto 0 auto;
+  justify-content: center;
+}
+
+.vinyl-animation img {
   height: 200px;
   width: 200px;
+  position: relative;
+  left: 40px;
+  z-index: 1;
+}
+
+.vinyl {
+  position: relative;
+  right: 40px;
+  animation: spin 4s 0.51s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: linear-gradient(-45deg, #333, black, #555, black, #333);
+}
+
+.vinyl::before {
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: repeating-radial-gradient(black, black 5px, #1c1c1c 6px, #1c1c1c 7px);
+  border-radius: 50%;
+}
+
+.inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(white, white 50%, grey 50%, grey);
+  border-radius: 50%;
+}
+
+.inner::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+}
+
+.inner::after {
+  content: "Artist";
+  width: 55px;
+  text-align: center;
+  font-family: "Staatliches", sans-serif;
+  font-size: 7px;
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 50px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
 }
