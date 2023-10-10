@@ -1,30 +1,18 @@
 const vinylRecord = document.querySelector(".vinyl-container");
 
+const vinylImage = document.querySelector("img[src='vinyl.png']");
+
+let isSpinning = false;
+
 vinylRecord.addEventListener("click", () => {
-  if (vinylRecord.style.animationPlayState === "paused") {
-    vinylRecord.style.animationPlayState = "running";
+  if (isSpinning) {
+    //  stop the animation
+    vinylImage.style.animationPlayState = "paused";
   } else {
-    vinylRecord.style.animationPlayState = "paused";
+    // start the animation
+    vinylImage.style.animationPlayState = "running";
   }
+
+  // toggle
+  isSpinning = !isSpinning;
 });
-
-// const thumbsUpButton = document.getElementById("thumbsUp");
-// const thumbsDownButton = document.getElementById("thumbsDown");
-
-// let upVotes = 0;
-// let downVotes = 0;
-
-// thumbsUpButton.addEventListener("click", () => {
-//   upVotes++;
-//   updateVoteCount();
-// });
-
-// thumbsDownButton.addEventListener("click", () => {
-//   downVotes++;
-//   updateVoteCount();
-// });
-
-// function updateVoteCount() {
-//   const voteCount = document.getElementById("voteCount");
-//   voteCount.innerHTML = `👍 ${upVotes}  👎 ${downVotes}`;
-// }
