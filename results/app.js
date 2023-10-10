@@ -2,6 +2,7 @@ const userProfile = JSON.parse(localStorage.getItem("userProfile"));
 
 const userMessageElement = document.getElementById("userMessage");
 const albumCoverElement = document.getElementById("album-cover");
+const vinylLabelElement = document.getElementById("vinylArtist");
 const videoElement = document.getElementById("recommendationVideo");
 
 const newSongButton = document.getElementById("newSong");
@@ -176,6 +177,11 @@ function renderSong() {
   userMessageElement.textContent = userMessageText;
   albumCoverElement.src = chosenSong.albumArtSrc;
   albumCoverElement.alt = `Album art for ${chosenSong.name} by ${chosenSong.artist}`;
+  //adds artist's name to animated vinyl image pseudo element
+  document.styleSheets[1].insertRule(
+    `.inner::after{content:"${chosenSong.artist}";}`,
+    document.styleSheets[1].cssRules.length
+  );
   videoElement.src = chosenSong.ytSrc;
   currentSongIndex = chosenSongIndex;
 }
