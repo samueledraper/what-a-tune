@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Staatliches", cursive;
+}
+
+body {
+  background: linear-gradient(-45deg, #000000, #0c0d0d, #212222, #212325);
+  background-size: 600% 600%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: #797b7c;
+  font-size: 3rem;
+  margin-bottom: 6rem;
+  text-decoration: underline #2e2e31;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
+}
+.splash-section {
+  display: flex;
+  position: relative;
+  min-height: 70vh;
+  text-align: center;
+  margin: 4rem auto;
+  overflow: hidden;
+  border: 4px solid rgb(83, 81, 81);
+  border-radius: 10%;
+  max-width: 80%;
+  box-shadow: 0 8px 16px rgb(127, 126, 126), 0 16px 32px rgb(68, 68, 68);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.video-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 30%;
+  border: 5px solid white;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  min-height: 10rem;
+}
+
+.content-wrapper p {
+  color: #797b7c;
+  max-width: 70%;
+  text-align: center;
+  margin-top: 30px;
+  line-height: 25px;
+  font-size: 2rem;
+  line-height: 30px;
+}
+
+.content-wrapper a {
+  margin-top: 15rem;
+  text-decoration: none;
+  position: relative;
+  color: #797b7c;
+  font-size: 1.5rem;
+}
+.content-wrapper a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #797b7c;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.content-wrapper a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.mood-section {
+  min-height: 70vh;
+  text-align: center;
+  margin: 4rem auto;
+  overflow: hidden;
+  border: 4px solid rgb(83, 81, 81);
+  border-radius: 10%;
+  max-width: 90%;
+  box-shadow: 0 8px 16px rgb(127, 126, 126), 0 16px 32px rgb(68, 68, 68);
+}

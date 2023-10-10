@@ -23,45 +23,57 @@
       href="./icon/favicon-16x16.png"
     />
     <link rel="manifest" href="./icon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Rubik+Mono+One&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
   </head>
   <body>
     <main>
       <section class="splash-section">
-        <h1>What-A-Tune</h1>
-        <img src="https://placehold.co/600x400" alt="background image" />
-        <p>
-          Welcome to <b><u>'What A Tune!'</u></b> - Your ultimate destination
-          for harmonising your mood with music. Get ready to experience the
-          magic of melodies as we craft the perfect song tailored to your
-          current emotions and your preferred genre. Simply share your feelings,
-          select your favourite musical genre, and let the symphony of sound
-          amplify your mood like never before!
-        </p>
-        <!-- Animated anchor tag, could possibly change this to a button with an animation to smooth scroll it down to the next section??-->
-        <a>Let's Get Started!</a>
+        <video class="video-bg" autoplay muted loop>
+          <source src="./video/turntablevideo.mp4" type="video/mp4" />
+        </video>
+        <div class="content-wrapper">
+          <h1>What A Tune</h1>
+          <p>
+            Welcome to 'What A Tune!'- Your ultimate destination for harmonizing
+            your mood with music. Get ready to experience the magic of melodies
+            as we craft the perfect song tailored to your current emotions and
+            your preferred genre. Simply share your feelings, select your
+            favourite musical genre, and let the symphony of sound amplify your
+            mood like never before!
+          </p>
+          <!-- Animated anchor tag, could possibly change this to a button with an animation to smooth scroll it down to the next section??-->
+          <a href="#target-section1">Let's Get Started!</a>
+        </div>
       </section>
       <section class="mood-section">
-        <h2>What's Your Current Mood?</h2>
-        <!-- Temporary width/heights for the image buttons-->
-        <button class="thumbs-up-btn">
-          <img
-            src="./images/thumbsup.png"
-            width="75px"
-            height="100px"
-            alt="Click for thumbs up"
-          />
-        </button>
-        <button class="thumbs-down-btn">
-          <img
-            src="./images/thumbsdown.png"
-            width="75px"
-            height="100px"
-            alt="Click for thumbs down"
-          />
-        </button>
-        <a>Next Question!</a>
+        <div id="target-section1">
+          <h2>What's Your Current Mood?</h2>
+          <!-- Temporary width/heights for the image buttons-->
+          <button class="thumbs-up-btn">
+            <img
+              src="./images/thumbsup.png"
+              width="75px"
+              height="100px"
+              alt="Click for thumbs up"
+            />
+          </button>
+          <button class="thumbs-down-btn">
+            <img
+              src="./images/thumbsdown.png"
+              width="75px"
+              height="100px"
+              alt="Click for thumbs down"
+            />
+          </button>
+          <a>Next Question!</a>
+        </div>
       </section>
       <section class="genre-section">
         <h2>Choose A Genre...</h2>
