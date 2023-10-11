@@ -36,7 +36,7 @@ body {
 button {
   margin: 20px;
   font-size: 1.5rem;
-  background-color: black;
+  background-color: rgb(62, 62, 62);
   width: 200px;
   cursor: pointer;
   border: 0;
