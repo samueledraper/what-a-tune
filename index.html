@@ -40,6 +40,9 @@
         </video>
         <div class="content-wrapper">
           <h2>What A Tune</h2>
+          <div class="learn-about-us">
+            <a href="./about/index.html"><b>Learn About Us!</b></a>
+          </div>
           <p>
             Welcome to 'What A Tune!'- Your ultimate destination for harmonizing
             your mood with music. Get ready to experience the magic of melodies
@@ -49,61 +52,68 @@
             mood like never before!
           </p>
           <!-- Animated anchor tag, could possibly change this to a button with an animation to smooth scroll it down to the next section??-->
-          <button class="link-btn">
-            <a href="#target-section1">Let's Get Started!</a>
-          </button>
+          <div class="lets-get-started">
+            <button class="link-btn">
+              <a href="#target-section1">Let's Get Started!</a>
+            </button>
+          </div>
         </div>
       </section>
       <section id="target-section1" class="mood-section">
         <video class="video-bg" autoplay muted loop>
           <source src="./homepage/video/dancing.mp4" type="video/mp4" />
         </video>
-        <div class="content-wrapper">
+        <div class="content-wrapper-mood">
           <h2>What's Your Current Mood?</h2>
           <!-- Temporary width/heights for the image buttons-->
-          <button class="thumbs-up-btn">
-            <img
-              src="./homepage/images/thumbs-up.png"
-              width="75px"
-              height="100px"
-              alt="Click for thumbs up"
-            />
-          </button>
-          <button class="thumbs-down-btn">
-            <img
-              src="./homepage/images/thumbs-down.png"
-              width="75px"
-              height="100px"
-              alt="Click for thumbs down"
-            />
-          </button>
+          <div class="button-position">
+            <button class="thumbs-up-btn">
+              <img
+                src="./homepage/images/thumbs-up.png"
+                width="75px"
+                height="100px"
+                alt="Click for thumbs up"
+              />
+            </button>
+            <button class="thumbs-down-btn">
+              <img
+                src="./homepage/images/thumbs-down.png"
+                width="75px"
+                height="100px"
+                alt="Click for thumbs down"
+              />
+            </button>
+          </div>
           <button class="link-btn">
             <a href="#target-section2">Next Question!</a>
           </button>
         </div>
       </section>
       <section id="target-section2" class="genre-section">
+        <video class="video-bg" autoplay muted loop>
+          <source src="./homepage/video/concert.mp4" type="video/mp4" />
+        </video>
         <h2>Choose A Genre...</h2>
-        <div class="rock-bubble">
-          <a>Rock</a>
+        <div class="genre-bubble">
+          <div class="bubble-item item-1">
+            <button>Rock</button>
+          </div>
+          <div class="bubble-item item-2">
+            <button>Electronic</button>
+          </div>
+          <div class="bubble-item item-3">
+            <button>Hip-Hop</button>
+          </div>
+          <div class="bubble-item item-4">
+            <button>Pop</button>
+          </div>
         </div>
-        <div class="electronic-bubble">
-          <a>Electronic</a>
+        <div class="see-results">
+          <button class="link-btn">
+            <a href="./results/index.html">See Results!</a>
+          </button>
         </div>
-        <div class="hip-hop-bubble">
-          <a>Hip-Hop</a>
-        </div>
-        <div class="classical-bubble">
-          <a>Classical</a>
-        </div>
-      </section>
-      <section class="see-results-section">
-        <button><a href="./results/index.html">See Results!</a></button>
       </section>
     </main>
-    <footer>
-      <a href="./about/index.html"><b>Learn About Us!</b></a>
-      <p>&copy;2023</p>
-    </footer>
   </body>
 </html>
