@@ -151,7 +151,7 @@ const songs = [
     "good",
     "electronic",
     "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/62/e4/01/62e40187-e672-17e5-f31f-9aee262703a3/mzi.bifzeufu.jpg/600x600bb.jpg",
-    "https://www.youtube.com/watch?v=tCnBrrnOefs"
+    "https://www.youtube.com/embed/tCnBrrnOefs?si=hIIvMMOneFpGBG03"
   ),
   new Song(
     "--",
