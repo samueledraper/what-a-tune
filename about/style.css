@@ -5,12 +5,12 @@ p {
   padding: 0;
   justify-content: space-between;
   align-items: center;
-  color: #d4af37;
+  color: #f8f6f0;
 }
 
 body {
   background: linear-gradient(-45deg, #000000, #0c0d0d, #212222, #212325);
-  background-size: 600% 600%;
+  background-size: 100% 100%;
   animation: gradient 10s ease infinite;
   height: 100vh;
   scroll-behavior: smooth;
@@ -32,7 +32,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  color: #d4af37;
+  color: #f8f6f0;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -49,7 +49,7 @@ button {
   padding: 10px;
   display: inline-block;
   position: relative;
-  color: white;
+  color: #f8f6f0;
   text-decoration: none;
   border-radius: 5px;
 }
@@ -99,10 +99,9 @@ button:hover::before {
   background-image: url("bcg.png");
   background-size: cover;
   background-position: center;
-  color: #cfcfcf;
+  color: #f8f6f0;
   text-align: center;
   padding: 100px 0;
-  color: #d4af37;
 }
 
 .hero-content {
@@ -111,13 +110,18 @@ button:hover::before {
 }
 
 .cta-button {
+  margin: 20px;
+  font-size: 1.5rem;
+  background-color: black;
+  width: 200px;
+  cursor: pointer;
+  border: 0;
+  padding: 10px;
   display: inline-block;
-  padding: 10px 20px;
-  background-color: #0070c9;
-  color: #cfcfcf;
+  position: relative;
+  color: #f8f6f0;
   text-decoration: none;
   border-radius: 5px;
-  margin-top: 20px;
 }
 
 .music {
@@ -131,7 +135,7 @@ button:hover::before {
 
 footer {
   background-color: black;
-  color: #cfcfcf;
+  color: #f8f6f0;
   text-align: center;
   padding: 10px 0;
 }
@@ -166,7 +170,7 @@ img[src="vinyl.png"] {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
   text-align: center;
-  color: #fff;
+  color: #f8f6f0;
   border-radius: 10px;
 }
 
