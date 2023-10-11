@@ -315,6 +315,9 @@ function renderSong() {
   );
   videoElement.src = chosenSong.ytSrc;
   currentSongIndex = chosenSongIndex;
+  if (userProfile.songHistory.length === matchingSongs.length) {
+    newSongButton.setAttribute("disabled", "");
+  }
 }
 
 reloadButton.addEventListener("click", function () {

@@ -70,6 +70,10 @@ button:hover::before {
   transform-origin: left;
 }
 
+button:disabled {
+  opacity: 0.5;
+}
+
 .vinyl-animation {
   display: flex;
   width: 400px;
@@ -106,7 +110,12 @@ button:hover::before {
   position: absolute;
   width: 180px;
   height: 180px;
-  background: repeating-radial-gradient(black, black 5px, #1c1c1c 6px, #1c1c1c 7px);
+  background: repeating-radial-gradient(
+    black,
+    black 5px,
+    #1c1c1c 6px,
+    #1c1c1c 7px
+  );
   border-radius: 50%;
 }
 
