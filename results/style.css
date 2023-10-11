@@ -2,7 +2,7 @@
   font-family: "Staatliches", sans-serif;
 }
 
-/* body {
+body {
   background: linear-gradient(-45deg, #000000, #0c0d0d, #212222, #212325);
   background-size: 600% 600%;
   animation: gradient 10s ease infinite;
@@ -18,7 +18,7 @@
   100% {
     background-position: 0% 50%;
   }
-} */
+}
 
 .song-recommendation {
   display: flex;

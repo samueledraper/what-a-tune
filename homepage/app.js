@@ -1,7 +1,7 @@
 const thumbsUpButton = document.getElementById("thumbs-up");
 const thumbsDownButton = document.getElementById("thumbs-down");
 
-const genreElements = document.querySelectorAll(".genre-bubble");
+const genreElements = document.querySelectorAll(".bubble-item");
 
 let userProfile = {};
 
@@ -29,7 +29,7 @@ function handleMoodChange(target) {
 }
 
 function handleGenreChange(target) {
-  const selectedElement = target.closest(".genre-bubble");
+  const selectedElement = target.closest(".bubble-item");
 
   for (let i = 0; i < genreElements.length; i++) {
     if (genreElements[i] === selectedElement) {
