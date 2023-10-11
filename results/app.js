@@ -7,6 +7,8 @@ const videoElement = document.getElementById("recommendationVideo");
 const newSongButton = document.getElementById("newSong");
 const reloadButton = document.getElementById("reload");
 
+const userSongHistory = document.getElementById("viewSongHistory");
+
 function Song(name, artist, mood, genre, albumArtSrc, ytSrc) {
   this.name = name;
   this.artist = artist;
@@ -284,7 +286,9 @@ function checkSongs() {
     }
   }
 
-  renderSong();
+  if (userProfile.songHistory.indexOf(matchingSongs[chosenSongIndex]) !== -1) {
+    renderSong();
+  }
 }
 
 function createRandomIndex(arr) {
@@ -296,7 +300,10 @@ function renderSong() {
   while (chosenSongIndex === currentSongIndex) {
     chosenSongIndex = createRandomIndex(matchingSongs);
   }
+  console.log(userProfile.songHistory.indexOf(matchingSongs[chosenSongIndex]));
+  console.table(userProfile.songHistory);
   const chosenSong = matchingSongs[chosenSongIndex];
+  userProfile.songHistory.push(chosenSong);
   const userMessageText = `Here's a ${chosenSong.genre} song for when you're in a ${chosenSong.mood} mood. Please enjoy!`;
   userMessageElement.textContent = userMessageText;
   albumCoverElement.src = chosenSong.albumArtSrc;
@@ -323,4 +330,18 @@ if (userProfile) {
   checkSongs();
 } else {
   userMessageElement.textContent = "Error: no user profile found";
+}
+
+userSongHistory.addEventListener("click", renderSongHistory);
+
+const parsedData = JSON.parse(localStorage.getItem("userProfile"));
+
+function renderSongHistory() {
+  const historyList = document.getElementById("songHistoryList");
+  for (let i = 0; i < userProfile.songHistory.length; i++) {
+    const listItem = document.createElement("li");
+    listItem.textContent = userProfile.songHistory[i].name;
+    historyList.appendChild(listItem);
+  }
+  // userProfile.songHistory = [];
 }
