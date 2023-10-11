@@ -285,6 +285,7 @@ function checkSongs() {
       matchingSongs.push(songs[i]);
     }
   }
+  renderSong();
 }
 
 function createRandomIndex(arr) {
