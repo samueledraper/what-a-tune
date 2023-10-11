@@ -26,20 +26,16 @@ body {
   }
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-}
-
 h2 {
   color: #797b7c;
   font-size: 3rem;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
   text-decoration: underline #2e2e31;
   text-underline-offset: 10px;
   text-decoration-thickness: 3px;
   opacity: 70%;
 }
+
 .splash-section {
   display: flex;
   position: relative;
@@ -70,6 +66,11 @@ h2 {
   border: 5px solid white;
 }
 
+.lets-get-started {
+  display: flex;
+  margin-top: 4rem;
+}
+
 .content-wrapper {
   display: flex;
   flex-direction: column;
@@ -90,8 +91,10 @@ h2 {
   line-height: 30px;
 }
 
+a {
+  margin-top: 10rem;
+}
 .content-wrapper a {
-  margin-top: 15rem;
   text-decoration: none;
   position: relative;
   color: #797b7c;
@@ -104,7 +107,7 @@ h2 {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #00ff59;
+  background-color: #d9e6de;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
@@ -116,11 +119,24 @@ h2 {
 
 .thumbs-up-btn,
 .thumbs-down-btn {
-  background-color: transparent;
+  background: none;
   border: none;
-  height: 20px;
-  width: 20px;
-  filter: grayscale(100%);
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.thumbs-down-btn {
+  rotate: 180deg;
+}
+
+.thumbs-up-btn:hover,
+.thumbs-down-btn:hover {
+  transform: scale(1.5);
+}
+
+.thumbs-up-btn:focus,
+.thumbs-down-btn:focus {
+  transform: scale(1.5);
 }
 
 .mood-section .video-bg {
@@ -138,7 +154,6 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   width: 100%;
   margin-top: 10rem;
@@ -148,7 +163,166 @@ h2 {
 .link-btn {
   background-color: transparent;
   border: none;
-  margin-top: 120px;
+  cursor: pointer;
+}
+
+.content-wrapper-mood {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.content-wrapper-mood a {
+  text-decoration: none;
+  position: relative;
+  color: #797b7c;
+  font-size: 2rem;
+}
+.content-wrapper-mood a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d9e6de;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.content-wrapper-mood a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.button-position {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  gap: 500px;
+}
+
+.next-question {
+  display: flex;
+  margin-top: 6rem;
+}
+
+.genre-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 70vh;
+  text-align: center;
+  overflow: hidden;
+  max-width: 80%;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 10rem;
+}
+
+.genre-bubble {
+  display: flex;
+  align-items: center;
+}
+
+.genre-section .video-bg {
+  filter: grayscale(100%);
+}
+
+.genre-section h2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.genre-bubble .bubble-item button:hover,
+.genre-bubble .bubble-item button:active,
+.genre-bubble .bubble-item button:focus {
+  width: 250px;
+  border: 10px solid rgba(0, 255, 89, 0.5);
+}
+
+.genre-bubble .bubble-item button {
+  aspect-ratio: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: 5px solid rgba(0, 255, 89, 0.5);
+  transition: width 1s;
+  width: 200px;
+  text-align: center;
+  margin: 20px;
+  color: #797b7c;
+  font-size: 2.25rem;
+  cursor: pointer;
+  filter: grayscale(100%) opacity(0.5);
+}
+
+.results-button {
+  width: 250px;
+  height: 100px;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+}
+
+.bubble-item.item-1 button {
+  background-image: url(./images/guitar.jpg);
+  background-size: cover;
+}
+
+.bubble-item.item-2 button {
+  background-image: url(./images/decks.jpg);
+  background-size: cover;
+}
+
+.bubble-item.item-3 button {
+  background-image: url(./images/rap.jpg);
+  background-size: cover;
+}
+
+.bubble-item.item-4 button {
+  background-image: url(./images/disco.jpg);
+  background-size: cover;
+}
+
+.see-results {
+  display: flex;
+  margin-top: 6rem;
+}
+
+.see-results button a {
+  margin-top: 15rem;
+  text-decoration: none;
+  position: relative;
+  color: #797b7c;
+  font-size: 2rem;
+}
+.see-results button a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #d9d6de;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.see-results button a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20px;
 }
 
 a {
