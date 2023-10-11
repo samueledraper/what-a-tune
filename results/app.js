@@ -337,11 +337,11 @@ userSongHistory.addEventListener("click", renderSongHistory);
 const parsedData = JSON.parse(localStorage.getItem("userProfile"));
 
 function renderSongHistory() {
+  document.getElementById("songHistoryList").innerHTML = "";
   const historyList = document.getElementById("songHistoryList");
   for (let i = 0; i < userProfile.songHistory.length; i++) {
     const listItem = document.createElement("li");
     listItem.textContent = userProfile.songHistory[i].name;
     historyList.appendChild(listItem);
   }
-  // userProfile.songHistory = [];
 }
