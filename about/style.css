@@ -8,6 +8,24 @@ p {
   color: #d4af37;
 }
 
+body {
+  background: linear-gradient(-45deg, #000000, #0c0d0d, #212222, #212325);
+  background-size: 600% 600%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /* background image */
 header {
   background-image: url("piano.png");
@@ -20,9 +38,46 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+/* matching buttons */
+button {
+  margin: 20px;
+  font-size: 1.5rem;
+  background-color: black;
+  width: 200px;
+  cursor: pointer;
+  border: 0;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
 
-/* buttons */
-.nav-button {
+button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* .nav-button {
   background-color: #4169e1;
   color: white;
   border: none;
@@ -32,12 +87,10 @@ header {
   cursor: pointer;
 }
 
-/* hoover */
 .nav-button:hover {
   background-color: #003171;
-  transform: translate3d(5px, 3px, 1px); /* love it  https://css-tricks.com/ */
-}
-
+  transform: translate3d(5px, 3px, 1px); /
+} */
 .resized-header {
   height: 50px;
 }
@@ -98,4 +151,26 @@ img[src="vinyl.png"] {
   to {
     transform: rotate(360deg);
   }
+}
+
+.splash-section {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-wrapper {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.splash-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }

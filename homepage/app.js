@@ -13,6 +13,7 @@ if (parsedData) {
   userProfile = {
     mood: "",
     genre: "",
+    songHistory: [],
   };
 }
 
