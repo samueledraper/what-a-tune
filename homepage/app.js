@@ -1,7 +1,7 @@
-const thumbsUpButton = document.getElementById(/*thumbs-up-button-id*/);
-const thumbsDownButton = document.getElementById(/*thumbs-down-button-id*/);
+const thumbsUpButton = document.getElementById("thumbs-up");
+const thumbsDownButton = document.getElementById("thumbs-down");
 
-const genreElements = document.querySelectorAll(/*.genre-button-class-name*/);
+const genreElements = document.querySelectorAll(".genre-bubble");
 
 let userProfile = {};
 
@@ -13,13 +13,15 @@ if (parsedData) {
   userProfile = {
     mood: "",
     genre: "",
+    songHistory: [],
   };
 }
 
 function handleMoodChange(target) {
-  if (target === thumbsUpButton) {
+  const button = target.closest("button");
+  if (button === thumbsUpButton) {
     userProfile.mood = "good";
-  } else if (target === thumbsDownButton) {
+  } else if (button === thumbsDownButton) {
     userProfile.mood = "bad";
   }
 
@@ -27,11 +29,14 @@ function handleMoodChange(target) {
 }
 
 function handleGenreChange(target) {
+  const selectedElement = target.closest(".genre-bubble");
+
   for (let i = 0; i < genreElements.length; i++) {
-    if (genreElements[i] === target) {
-      userProfile.genre = target.dataset.genre;
+    if (genreElements[i] === selectedElement) {
+      userProfile.genre = selectedElement.dataset.genre;
     }
   }
+
   localStorage.setItem("userProfile", JSON.stringify(userProfile));
 }
 

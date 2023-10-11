@@ -3,17 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What a Tune! - Results</title>
+    <!-- Vinyl Favicon for the tab!-->
+    <link rel="apple-touch-icon" sizes="180x180" href=".homepage/icon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href=".homepage/icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href=".homepage/icon/favicon-16x16.png" />
+    <link rel="manifest" href="./icon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Rubik+Mono+One&family=Staatliches&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
-    <title>What a Tune - Results</title>
     <script src="./app.js" defer></script>
   </head>
   <body>
     <main>
       <section class="vinyl-animation">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/b/b6/12in-Vinyl-LP-Record-Angle.jpg"
-          alt=""
-        />
+        <img id="album-cover" src="./images/moon-safari.jpeg" alt="" />
+        <div class="vinyl">
+          <div class="inner" id="vinylArtist"></div>
+        </div>
       </section>
       <section class="song-recommendation">
         <p id="userMessage"></p>
@@ -27,10 +38,14 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
-        <button id="newSong">New song</button>
+        <div class="user-options">
+          <button id="newSong">New song</button>
+          <button id="reload">Start again</button>
+          <button id="viewSongHistory">Song History</button>
+        </div>
       </section>
       <section>
-        <button id="reload">Start again</button>
+        <ul id="songHistoryList"></ul>
       </section>
     </main>
     <footer>

@@ -66,8 +66,9 @@
         <div class="content-wrapper-mood">
           <h2>What's Your Current Mood?</h2>
           <!-- Temporary width/heights for the image buttons-->
+
           <div class="button-position">
-            <button class="thumbs-up-btn">
+            <button class="thumbs-up-btn" id="thumbs-up">
               <img
                 src="./homepage/images/thumbsup-1.png"
                 width="200px"
@@ -75,7 +76,7 @@
                 alt="Click for thumbs up"
               />
             </button>
-            <button class="thumbs-down-btn">
+            <button class="thumbs-down-btn" id="thumbs-down">
               <img
                 src="./homepage/images/thumbsdown-1.png"
                 width="200px"
@@ -97,16 +98,16 @@
         </video>
         <h2>Choose A Genre...</h2>
         <div class="genre-bubble">
-          <div class="bubble-item item-1">
+          <div class="bubble-item item-1" data-genre="rock">
             <button>Rock</button>
           </div>
-          <div class="bubble-item item-2">
+          <div class="bubble-item item-2" data-genre="electronic">
             <button>Electronic</button>
           </div>
-          <div class="bubble-item item-3">
+          <div class="bubble-item item-3" data-genre="hip-hop">
             <button>Hip-Hop</button>
           </div>
-          <div class="bubble-item item-4">
+          <div class="bubble-item item-4" data-genre="pop">
             <button>Pop</button>
           </div>
         </div>

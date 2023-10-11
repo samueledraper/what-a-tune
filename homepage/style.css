@@ -324,3 +324,7 @@ footer {
   align-items: center;
   height: 20px;
 }
+
+a {
+  color: white;
+}
