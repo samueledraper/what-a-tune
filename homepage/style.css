@@ -107,7 +107,7 @@ a {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #00ff59;
+  background-color: #d9e6de;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
@@ -119,11 +119,24 @@ a {
 
 .thumbs-up-btn,
 .thumbs-down-btn {
-  background-color: transparent;
+  background: none;
   border: none;
-  height: 20px;
-  width: 20px;
-  filter: grayscale(100%);
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.thumbs-down-btn {
+  rotate: 180deg;
+}
+
+.thumbs-up-btn:hover,
+.thumbs-down-btn:hover {
+  transform: scale(1.5);
+}
+
+.thumbs-up-btn:focus,
+.thumbs-down-btn:focus {
+  transform: scale(1.5);
 }
 
 .mood-section .video-bg {
@@ -156,14 +169,12 @@ a {
 .content-wrapper-mood {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 10px;
+  align-items: center;
   text-align: center;
-  min-height: 10rem;
+  justify-content: center;
 }
 
 .content-wrapper-mood a {
-  margin-top: 15rem;
   text-decoration: none;
   position: relative;
   color: #797b7c;
@@ -176,7 +187,7 @@ a {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #00ff59;
+  background-color: #d9e6de;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
@@ -186,14 +197,16 @@ a {
   transform-origin: left;
 }
 
-.content-wrapper-mood h2 {
-  padding: 10rem;
-}
-
 .button-position {
   display: flex;
-  justify-content: space-between;
-  top: 0;
+  justify-content: space-around;
+  margin-top: 40px;
+  gap: 500px;
+}
+
+.next-question {
+  display: flex;
+  margin-top: 6rem;
 }
 
 .genre-section {
@@ -256,27 +269,6 @@ a {
   border: none;
 }
 
-.results-button a {
-  text-decoration: none;
-}
-
-.genre-section a::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #00ff59;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-.genre-section a:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
 .bubble-item.item-1 button {
   background-image: url(./images/guitar.jpg);
   background-size: cover;
@@ -316,7 +308,7 @@ a {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #00ff59;
+  background-color: #d9d6de;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
