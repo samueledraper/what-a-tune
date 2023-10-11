@@ -7,6 +7,9 @@ let userProfile = {};
 
 const parsedData = JSON.parse(localStorage.getItem("userProfile"));
 
+let moodSelected = false;
+let genreSelected = false;
+
 if (parsedData) {
   userProfile = parsedData;
 } else {
@@ -40,16 +43,29 @@ function handleGenreChange(target) {
   localStorage.setItem("userProfile", JSON.stringify(userProfile));
 }
 
+function checkIfReadyToShowResults() {
+  if (moodSelected && genreSelected) {
+    const seeResultsDiv = document.getElementById("see-results");
+    seeResultsDiv.style.display = "block";
+  }
+}
+
 thumbsUpButton.addEventListener("click", function (event) {
   handleMoodChange(event.target);
+  moodSelected = true;
+  checkIfReadyToShowResults();
 });
 
 thumbsDownButton.addEventListener("click", function (event) {
   handleMoodChange(event.target);
+  moodSelected = true;
+  checkIfReadyToShowResults();
 });
 
 for (let i = 0; i < genreElements.length; i++) {
   genreElements[i].addEventListener("click", function (event) {
     handleGenreChange(event.target);
+    genreSelected = true;
+    checkIfReadyToShowResults();
   });
 }
