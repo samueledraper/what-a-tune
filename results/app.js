@@ -281,13 +281,12 @@ let matchingSongs = [];
 
 function checkSongs() {
   for (let i = 0; i < songs.length; i++) {
-    if (songs[i].mood === userProfile.mood && songs[i].genre === userProfile.genre) {
+    if (
+      songs[i].mood === userProfile.mood &&
+      songs[i].genre === userProfile.genre
+    ) {
       matchingSongs.push(songs[i]);
     }
-  }
-
-  if (userProfile.songHistory.indexOf(matchingSongs[chosenSongIndex]) !== -1) {
-    renderSong();
   }
 }
 
@@ -297,11 +296,12 @@ function createRandomIndex(arr) {
 
 function renderSong() {
   let chosenSongIndex = createRandomIndex(matchingSongs);
-  while (chosenSongIndex === currentSongIndex) {
+  while (
+    chosenSongIndex === currentSongIndex ||
+    userProfile.songHistory.includes(matchingSongs[chosenSongIndex])
+  ) {
     chosenSongIndex = createRandomIndex(matchingSongs);
   }
-  console.log(userProfile.songHistory.indexOf(matchingSongs[chosenSongIndex]));
-  console.table(userProfile.songHistory);
   const chosenSong = matchingSongs[chosenSongIndex];
   userProfile.songHistory.push(chosenSong);
   const userMessageText = `Here's a ${chosenSong.genre} song for when you're in a ${chosenSong.mood} mood. Please enjoy!`;
