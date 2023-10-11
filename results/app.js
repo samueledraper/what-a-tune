@@ -281,10 +281,7 @@ let matchingSongs = [];
 
 function checkSongs() {
   for (let i = 0; i < songs.length; i++) {
-    if (
-      songs[i].mood === userProfile.mood &&
-      songs[i].genre === userProfile.genre
-    ) {
+    if (songs[i].mood === userProfile.mood && songs[i].genre === userProfile.genre) {
       matchingSongs.push(songs[i]);
     }
   }
