@@ -87,7 +87,12 @@ main {
   position: absolute;
   width: 180px;
   height: 180px;
-  background: repeating-radial-gradient(black, black 5px, #1c1c1c 6px, #1c1c1c 7px);
+  background: repeating-radial-gradient(
+    black,
+    black 5px,
+    #1c1c1c 6px,
+    #1c1c1c 7px
+  );
   border-radius: 50%;
 }
 
@@ -208,6 +213,7 @@ button:disabled {
   gap: 50px;
   list-style-type: none;
   padding: 0;
+  margin: 0 5%;
 }
 
 .user-history li {
