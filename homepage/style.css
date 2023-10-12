@@ -27,7 +27,7 @@ body {
 }
 
 h2 {
-  color: #797b7c;
+  color: #ffffff;
   font-size: 3rem;
   margin-bottom: 2rem;
   text-decoration: underline #2e2e31;
@@ -82,7 +82,7 @@ h2 {
 }
 
 .content-wrapper p {
-  color: #797b7c;
+  color: rgb(255, 255, 255, 0.8);
   max-width: 70%;
   text-align: center;
   margin-top: 30px;
@@ -97,7 +97,7 @@ a {
 .content-wrapper a {
   text-decoration: none;
   position: relative;
-  color: #797b7c;
+  color: rgb(255, 255, 255, 0.8);
   font-size: 2rem;
 }
 .content-wrapper a::before {
@@ -157,7 +157,7 @@ a {
   text-align: center;
   width: 100%;
   margin-top: 10rem;
-  padding: 10rem;
+  padding: 12rem;
 }
 
 .link-btn {
@@ -177,7 +177,7 @@ a {
 .content-wrapper-mood a {
   text-decoration: none;
   position: relative;
-  color: #797b7c;
+  color: rgb(255, 255, 255, 0.8);
   font-size: 2rem;
 }
 .content-wrapper-mood a::before {
@@ -221,12 +221,13 @@ a {
   text-align: center;
   width: 100%;
   margin-top: 1rem;
-  padding: 10rem;
+  padding: 12rem;
 }
 
 .genre-bubble {
   display: flex;
   justify-content: space-between;
+  padding: 1rem;
 }
 
 .genre-section .video-bg {
@@ -237,12 +238,13 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-bottom: 7rem;
 }
 
 .genre-bubble .bubble-item button:hover,
 .genre-bubble .bubble-item button:active,
 .genre-bubble .bubble-item button:focus {
-  width: 250px;
+  width: 300px;
   border: 10px solid rgba(0, 255, 89, 0.5);
 }
 
@@ -253,13 +255,13 @@ a {
   border-radius: 50%;
   border: 5px solid rgba(0, 255, 89, 0.5);
   transition: width 1s;
-  width: 200px;
+  width: 250px;
   text-align: center;
   margin: 20px;
-  color: #797b7c;
+  color: rgb(255, 255, 255, 0.8);
   font-size: 2.25rem;
   cursor: pointer;
-  filter: grayscale(100%) opacity(0.5);
+  opacity: 0.5;
 }
 
 .results-button {
@@ -292,14 +294,14 @@ a {
 
 .see-results {
   display: none;
-  margin-top: 6rem;
+  margin-top: 10rem;
 }
 
 .see-results button a {
   margin-top: 15rem;
   text-decoration: none;
   position: relative;
-  color: #797b7c;
+  color: rgb(255, 255, 255, 0.8);
   font-size: 2rem;
 }
 .see-results button a::before {
@@ -309,7 +311,7 @@ a {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #d9d6de;
+  background-color: rgb(255, 255, 255, 0.8);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
