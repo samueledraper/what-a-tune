@@ -25,7 +25,7 @@ const songs = [
     "good",
     "pop",
     "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/81/22/d3/8122d33b-2334-44a3-1990-b80d80dd522d/mzi.jmjoreqd.jpg/600x600bb.jpg",
-    "https://www.youtube.com/embed/fsccjsW8bSY?si=YU7rlXM61P4O4ZKb"
+    "https://www.youtube.com/embed/fsccjsW8bSY?si=YU7rlXM61P4O4ZKb?"
   ),
   new Song(
     "Good As Hell",
@@ -60,6 +60,7 @@ const songs = [
     "https://www.youtube.com/embed/j7sTHoeH0eA?si=defPGYJV8BuhY1MP"
   ),
   new Song(
+
     "Don't Stop Believin'",
     "Journey",
     "good",
@@ -120,8 +121,8 @@ const songs = [
     "Nina Simone",
     "good",
     "pop",
-    "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/18/db/05/18db0507-f276-d93d-a4a7-e856a3f1590a/13UAAIM08283.rgb.jpg/600x600bb.jpg",
-    "https://www.youtube.com/embed/oHRNrgDIJfo?si=EiVy0KzgaGH1SUmK"
+    "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ed/17/65/ed17656f-4c55-97c2-c93d-4b94f829799f/859381157694.jpg/600x600bb.jpg",
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?si=IiZZpCIPEUjonDIR"
   ),
   new Song(
     "Streets of Philadelphia",
@@ -204,6 +205,14 @@ const songs = [
     "https://www.youtube.com/embed/RUGKx_kWaVk?si=UmALrdiDsxjnYH_h"
   ),
   new Song(
+    "--",
+    "Rick Astley",
+    "good",
+    "rock",
+    "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ed/17/65/ed17656f-4c55-97c2-c93d-4b94f829799f/859381157694.jpg/600x600bb.jpg",
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?si=IiZZpCIPEUjonDIR"
+  ),
+  new Song(
     "Thunderstruck",
     "AC/DC",
     "good",
@@ -284,6 +293,14 @@ const songs = [
     "https://www.youtube.com/embed/C3LXkdpHNOQ?si=UN3QMMPnuQSCh53-"
   ),
   new Song(
+    "--",
+    "Rick Astley",
+    "bad",
+    "rock",
+    "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ed/17/65/ed17656f-4c55-97c2-c93d-4b94f829799f/859381157694.jpg/600x600bb.jpg",
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?si=IiZZpCIPEUjonDIR"
+  ),
+  new Song(
     "Why'd You Only Call Me When You're High?",
     "Arctic Monkeys",
     "bad",
@@ -362,6 +379,14 @@ const songs = [
     "electronic",
     "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/62/e4/01/62e40187-e672-17e5-f31f-9aee262703a3/mzi.bifzeufu.jpg/600x600bb.jpg",
     "https://www.youtube.com/embed/tCnBrrnOefs?si=hIIvMMOneFpGBG03"
+  ),
+  new Song(
+    "--",
+    "Rick Astley",
+    "good",
+    "electronic",
+    "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/ed/17/65/ed17656f-4c55-97c2-c93d-4b94f829799f/859381157694.jpg/600x600bb.jpg",
+    "https://www.youtube.com/embed/dQw4w9WgXcQ?si=IiZZpCIPEUjonDIR"
   ),
   new Song(
     "Go",
@@ -633,10 +658,7 @@ let matchingSongs = [];
 
 function checkSongs() {
   for (let i = 0; i < songs.length; i++) {
-    if (
-      songs[i].mood === userProfile.mood &&
-      songs[i].genre === userProfile.genre
-    ) {
+    if (songs[i].mood === userProfile.mood && songs[i].genre === userProfile.genre) {
       matchingSongs.push(songs[i]);
     }
   }
