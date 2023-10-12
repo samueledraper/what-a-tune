@@ -218,6 +218,11 @@ button:disabled {
 
 .user-history li {
   text-align: center;
+  justify-content: space-evenly;
+}
+
+.user-history p {
+  max-width: 200px;
 }
 
 .user-history h2 {

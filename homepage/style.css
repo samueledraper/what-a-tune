@@ -30,7 +30,7 @@ h2 {
   color: #ffffff;
   font-size: 3rem;
   margin-bottom: 8rem;
-  text-decoration: underline #2e2e31;
+  text-decoration: underline #c1c1c4;
   text-underline-offset: 10px;
   text-decoration-thickness: 3px;
   opacity: 70%;
@@ -237,7 +237,7 @@ a {
   align-items: center;
   text-align: center;
   width: 100%;
-  margin: 1rem;
+  margin-top: 1rem;
   padding: 12rem;
 }
 
@@ -262,7 +262,14 @@ a {
 .genre-bubble .bubble-item button:active,
 .genre-bubble .bubble-item button:focus {
   width: 300px;
-  border: 10px solid rgba(0, 255, 89, 0.5);
+  border: 7px solid rgba(0, 255, 89, 0.5);
+  opacity: 0.7;
+  filter: grayscale(0%);
+}
+
+.genre-bubble .bubble-item button:focus {
+  width: 300px;
+  border: 8px solid rgb(0, 255, 89);
 }
 
 .genre-bubble .bubble-item button {
@@ -270,15 +277,16 @@ a {
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
-  border: 5px solid rgba(0, 255, 89, 0.5);
+  border: 5px solid rgba(255, 255, 255, 0.5);
   transition: width 1s;
   width: 250px;
   text-align: center;
   margin: 20px;
-  color: rgb(255, 255, 255, 0.8);
+  color: rgb(255, 255, 255);
   font-size: 2.25rem;
   cursor: pointer;
   opacity: 0.5;
+  filter: grayscale(100%);
 }
 
 .results-button {
@@ -318,7 +326,7 @@ a {
   margin-top: 15rem;
   text-decoration: none;
   position: relative;
-  color: rgb(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 2rem;
 }
 .see-results button a::before {
@@ -341,4 +349,22 @@ a {
 .see-results button a:hover::before {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+#see-results {
+  display: none;
+}
+
+/* Add a smooth fade-in animation */
+#see-results.fade-in {
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
