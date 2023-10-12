@@ -32,36 +32,37 @@
     <link rel="stylesheet" href="./style.css" />
     <script src="./app.js" defer></script>
   </head>
-  <body>
+  <body id="top">
     <main>
-      <section class="vinyl-animation">
-        <img id="album-cover" src="./images/moon-safari.jpeg" alt="" />
-        <div class="vinyl">
-          <div class="inner" id="vinylArtist"></div>
-        </div>
+      <section class="results">
+        <section class="vinyl-animation">
+          <img id="album-cover" src="./images/moon-safari.jpeg" alt="" />
+          <div class="vinyl">
+            <div class="inner" id="vinylArtist"></div>
+          </div>
+        </section>
+        <section class="song-recommendation">
+          <p id="userMessage"></p>
+          <iframe
+            id="recommendationVideo"
+            width="560"
+            height="315"
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <div class="user-options">
+            <button id="newSong">New song</button>
+            <button id="reload">Start again</button>
+            <button id="viewSongHistory" onclick="location.href='#songHistoryList';">
+              Song History
+            </button>
+          </div>
+        </section>
       </section>
-      <section class="song-recommendation">
-        <p id="userMessage"></p>
-        <iframe
-          id="recommendationVideo"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Iy8qhkaAyMF0gQ0S"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-        <div class="user-options">
-          <button id="newSong">New song</button>
-          <button id="reload">Start again</button>
-          <button id="viewSongHistory">Song History</button>
-        </div>
-      </section>
-      <section id="songHistoryList"></section>
+      <section class="user-history" id="songHistoryList"></section>
     </main>
-    <footer>
-      <a href="../about/index.html">View Credits</a>
-    </footer>
   </body>
 </html>

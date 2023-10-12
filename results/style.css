@@ -1,11 +1,44 @@
 * {
+  box-sizing: border-box;
   font-family: "Staatliches", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   background: linear-gradient(-45deg, #000000, #0c0d0d, #212222, #212325);
   background-size: 600% 600%;
   animation: gradient 10s ease infinite;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.results {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.user-history {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 85vh;
+
+  background: linear-gradient(
+    45deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
 }
 
 @keyframes gradient {
@@ -20,64 +53,8 @@ body {
   }
 }
 
-.song-recommendation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-}
-
-.song-recommendation p {
-  color: white;
-  font-size: 2rem;
-  margin: 40px auto;
-}
-
-button {
-  margin: 20px;
-  font-size: 1.5rem;
-  background-color: rgb(62, 62, 62);
-  width: 200px;
-  cursor: pointer;
-  border: 0;
-  padding: 10px;
-  display: inline-block;
-  position: relative;
-  color: white;
-  text-decoration: none;
-}
-
-button::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 50%,
-    rgba(252, 176, 69, 1) 100%
-  );
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-
-button:hover::before {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-button:disabled {
-  opacity: 0.5;
-}
-
 .vinyl-animation {
   display: flex;
-  width: 400px;
-  margin: 100px auto 0 auto;
   justify-content: center;
 }
 
@@ -142,24 +119,105 @@ button:disabled {
   width: 55px;
   text-align: center;
   font-family: "Staatliches", sans-serif;
-  font-size: 7px;
+  font-size: 5px;
   position: absolute;
   left: 50%;
   top: 10px;
   transform: translateX(-50%);
 }
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
 
-footer {
-  text-align: center;
-  padding: 50px;
+.song-recommendation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-footer a {
-  text-decoration: none;
+.song-recommendation p {
   color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin: 4rem auto;
+}
+
+.song-recommendation iframe {
+  margin: 2rem auto;
+}
+
+.user-options {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  display: inline-block;
+  position: relative;
+  margin: 1rem;
+  width: 200px;
+  border: 0;
+  padding: 10px;
+  background-color: rgb(62, 62, 62);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+button:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+.user-history img {
+  width: 200px;
+  height: 200px;
+}
+
+.user-history ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-history li {
+  text-align: center;
+}
+
+.user-history h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+  margin-top: 200px;
+  margin-bottom: 50px;
 }

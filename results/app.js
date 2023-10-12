@@ -337,12 +337,25 @@ userSongHistory.addEventListener("click", renderSongHistory);
 
 const parsedData = JSON.parse(localStorage.getItem("userProfile"));
 
+document.getElementById("songHistoryList").style.display = "none";
+
 function renderSongHistory() {
   document.getElementById("songHistoryList").innerHTML = "";
+  document.getElementById("songHistoryList").style.display = "block";
   const historyList = document.getElementById("songHistoryList");
+  const title = document.createElement("h2");
+  title.textContent = "You've been listening to";
+  historyList.appendChild(title);
+  const ul = document.createElement("ul");
+  historyList.appendChild(ul);
   for (let i = 0; i < userProfile.songHistory.length; i++) {
     const listItem = document.createElement("li");
-    listItem.textContent = userProfile.songHistory[i].name;
-    historyList.appendChild(listItem);
+    ul.appendChild(listItem);
+    const albumCoverImg = document.createElement("img");
+    albumCoverImg.src = userProfile.songHistory[i].albumArtSrc;
+    listItem.appendChild(albumCoverImg);
+    const albumInfo = document.createElement("p");
+    albumInfo.textContent = `${userProfile.songHistory[i].name} by ${userProfile.songHistory[i].artist}`;
+    listItem.appendChild(albumInfo);
   }
 }
