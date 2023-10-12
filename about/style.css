@@ -186,7 +186,6 @@ img[src="vinyl.png"] {
   width: 80%;
   margin: 0 auto;
   line-height: 1.7;
-  text-align: center;
 }
 
 .content-wrapper p {
@@ -201,6 +200,9 @@ img[src="vinyl.png"] {
 }
 
 .profile {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   border: 2px solid white;
   border-radius: 0.5em;
   padding: 1em;
