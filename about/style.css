@@ -186,6 +186,7 @@ img[src="vinyl.png"] {
   width: 80%;
   margin: 0 auto;
   line-height: 1.7;
+  text-align: center;
 }
 
 .content-wrapper p {
