@@ -211,7 +211,8 @@ a {
   display: flex;
   justify-content: space-around;
   margin-top: 40px;
-  gap: 500px;
+  gap: 650px;
+  padding: 5rem;
 }
 
 .next-question {
