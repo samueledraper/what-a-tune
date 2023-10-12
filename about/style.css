@@ -28,12 +28,7 @@ body {
     background-position: 0% 50%;
   }
 }
-/* background image */
 header {
-  /* background-image: url("piano.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center; */
   box-shadow: 0 8px 16px rgb(127, 126, 126), 0 16px 32px rgb(68, 68, 68);
   position: relative;
   color: #f8f6f0;
@@ -211,38 +206,15 @@ img[src="vinyl.png"] {
   text-align: center;
 }
 
-@keyframes play {
-  0%,
-  100% {
-    height: 0%;
-  }
-
-  50% {
-    height: 100%;
-  }
+.profile img {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin: 0;
+  object-fit: cover;
+  object-position: center top;
+  width: 200px;
 }
 
-.visulaiser {
-  align-items: flex-end;
-  display: flex;
-  gap: 5px;
-  height: 33dvh;
-  justify-content: space-around;
-  margin: auto;
-  max-width: 500px;
-  width: calc(100% - 10em);
-}
-
-.bar {
-  animation: play infinite 0.5s linear;
-  background-color: green;
-  width: 3em;
-}
-
-.bar:nth-child(2n) {
-  animation-delay: 0.1s;
-}
-
-.bar:nth-child(3n) {
-  animation-delay: 0.05s;
+.profile a {
+  margin-top: auto;
 }
