@@ -16,7 +16,3 @@ vinylRecord.addEventListener("click", () => {
   // toggle
   isSpinning = !isSpinning;
 });
-// reloadButton.addEventListener("click", function () {
-//   localStorage.clear();
-//   document.location = "../index.html";
-// });
