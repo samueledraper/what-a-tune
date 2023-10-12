@@ -47,6 +47,11 @@ function checkIfReadyToShowResults() {
   if (moodSelected && genreSelected) {
     const seeResultsDiv = document.getElementById("see-results");
     seeResultsDiv.style.display = "block";
+    seeResultsDiv.classList.add("fade-in");
+
+    seeResultsDiv.addEventListener("animationend", function () {
+      seeResultsDiv.classList.remove("fade-in");
+    });
   }
 }
 
