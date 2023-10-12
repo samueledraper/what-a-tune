@@ -115,6 +115,14 @@ const songs = [
     "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/bd/df/9d/bddf9d26-d45a-278f-26c1-e5274094cb27/190295671600.jpg/600x600bb.jpg",
     "https://www.youtube.com/watch?v=VbD_kBJc_gI"
   ),
+    new Song(
+    "Feeling Good",
+    "Nina Simone",
+    "good",
+    "pop",
+    "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/18/db/05/18db0507-f276-d93d-a4a7-e856a3f1590a/13UAAIM08283.rgb.jpg/600x600bb.jpg",
+    "https://www.youtube.com/embed/oHRNrgDIJfo?si=EiVy0KzgaGH1SUmK"
+  ),
   new Song(
     "Streets of Philadelphia",
     "Bruce Springsteen",
