@@ -10,10 +10,12 @@ p {
 
 body {
   background: linear-gradient(-45deg, #000000, #0c0d0d, #212222, #212325);
-  background-size: 100% 100%;
+  background-size: 600% 600%;
+  font-family: "Staatliches", sans-serif;
   animation: gradient 10s ease infinite;
   height: 100vh;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 @keyframes gradient {
   0% {
@@ -28,21 +30,46 @@ body {
 }
 /* background image */
 header {
-  background-image: url("piano.png");
+  /* background-image: url("piano.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center center; */
+  box-shadow: 0 8px 16px rgb(127, 126, 126), 0 16px 32px rgb(68, 68, 68);
+  position: relative;
   color: #f8f6f0;
   padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 10em;
+}
+
+.video-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 30%;
+  border: 5px solid white;
+  filter: grayscale(1);
+}
+
+header > .container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
 }
 /* matching buttons */
-button {
+a {
   margin: 20px;
   font-size: 1.5rem;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.993);
   width: 200px;
   cursor: pointer;
   border: 0;
@@ -50,11 +77,12 @@ button {
   display: inline-block;
   position: relative;
   color: #f8f6f0;
+  text-align: center;
   text-decoration: none;
   border-radius: 5px;
 }
 
-button::before {
+a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -72,41 +100,26 @@ button::before {
   transition: transform 0.3s ease;
 }
 
-button:hover::before {
+a:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 }
 
-/* .nav-button {
-  background-color: #4169e1;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.nav-button:hover {
-  background-color: #003171;
-  transform: translate3d(5px, 3px, 1px); /
-} */
 .resized-header {
   height: 50px;
 }
 
-.hero {
-  background-image: url("bcg.png");
-  background-size: cover;
-  background-position: center;
-  color: #f8f6f0;
+h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
   text-align: center;
-  padding: 100px 0;
+  margin-bottom: 0;
 }
 
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
+.subheading {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  text-align: center;
 }
 
 .cta-button {
@@ -160,21 +173,76 @@ img[src="vinyl.png"] {
 .splash-section {
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 5rem 0;
 }
 
 .content-wrapper {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  text-align: center;
+  background-image: url("bcg.png");
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 4px solid rgb(83, 81, 81);
+  border-radius: 2em;
+  box-shadow: 0 8px 16px rgb(127, 126, 126), 0 16px 32px rgb(68, 68, 68);
+  font-size: 1.1rem;
+  padding: 2em;
   color: #f8f6f0;
-  border-radius: 10px;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
-.splash-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.content-wrapper p {
+  margin: 1em 0;
+}
+
+.profiles {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 2em 0;
+}
+
+.profile {
+  border: 2px solid white;
+  border-radius: 0.5em;
+  padding: 1em;
+  text-align: center;
+}
+
+@keyframes play {
+  0%,
+  100% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+}
+
+.visulaiser {
+  align-items: flex-end;
+  display: flex;
+  gap: 5px;
+  height: 33dvh;
+  justify-content: space-around;
+  margin: auto;
+  max-width: 500px;
+  width: calc(100% - 10em);
+}
+
+.bar {
+  animation: play infinite 0.5s linear;
+  background-color: green;
+  width: 3em;
+}
+
+.bar:nth-child(2n) {
+  animation-delay: 0.1s;
+}
+
+.bar:nth-child(3n) {
+  animation-delay: 0.05s;
 }
