@@ -121,7 +121,7 @@ const songs = [
     "good",
     "pop",
     "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/18/db/05/18db0507-f276-d93d-a4a7-e856a3f1590a/13UAAIM08283.rgb.jpg/600x600bb.jpg",
-    "https://www.youtube.com/embed/dQw4w9WgXcQ?si=IiZZpCIPEUjonDIR"
+    "https://www.youtube.com/embed/oHRNrgDIJfo?si=cjs4tEitET7iAh8-"
   ),
   new Song(
     "Streets of Philadelphia",
@@ -633,7 +633,10 @@ let matchingSongs = [];
 
 function checkSongs() {
   for (let i = 0; i < songs.length; i++) {
-    if (songs[i].mood === userProfile.mood && songs[i].genre === userProfile.genre) {
+    if (
+      songs[i].mood === userProfile.mood &&
+      songs[i].genre === userProfile.genre
+    ) {
       matchingSongs.push(songs[i]);
     }
   }
